@@ -1,0 +1,17 @@
+﻿<Window x:Class="A2TszFungChan.CheatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A2TszFungChan"
+        mc:Ignorable="d"
+        Title="CheatWindow" Height="200" Width="700">
+    <Grid>
+        <Label Content="The selected team will not lose any game" HorizontalAlignment="Left" Height="45" Margin="151,39,0,0" VerticalAlignment="Top" Width="488" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Team:" HorizontalAlignment="Left" Margin="55,107,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <ComboBox x:Name="CBTeams" HorizontalAlignment="Left" Margin="131,111,0,0" VerticalAlignment="Top" Width="199" FontSize="22" FontWeight="Bold"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Margin="382,111,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Width="113" Click="btnOK_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="522,110,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Width="113" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>

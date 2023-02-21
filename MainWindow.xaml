@@ -1,0 +1,144 @@
+﻿<Window x:Class="A2TszFungChan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A2TszFungChan"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="FIFA World Cup" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" FontFamily="Arial"/>
+        <TabControl Margin="0,56,0,0">
+            <TabItem Header="Groups">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="347*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Group A" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <Label Content="Group E" HorizontalAlignment="Left" Margin="61,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <Label Content="Group B" HorizontalAlignment="Left" Margin="126,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <Label Content="Group F" HorizontalAlignment="Left" Margin="126,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <Label Content="Group C" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <Label Content="Group G" HorizontalAlignment="Left" Margin="296,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <Label Content="Group D" HorizontalAlignment="Left" Margin="468,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <Label Content="Group H" HorizontalAlignment="Left" Margin="468,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <ListBox x:Name="lstA" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="61,39,601,180"/>
+                    <ListBox x:Name="lstB" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="126,39,436,180" Grid.Column="1"/>
+                    <ListBox x:Name="lstC" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="296,39,266,180" Grid.Column="1"/>
+                    <ListBox x:Name="lstD" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="468,39,94,180" Grid.Column="1"/>
+                    <ListBox x:Name="lstE" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="61,204,601,15"/>
+                    <ListBox x:Name="lstF" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="126,204,436,15" Grid.Column="1"/>
+                    <ListBox x:Name="lstG" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="297,204,265,15" Grid.Column="1"/>
+                    <ListBox x:Name="lstH" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="468,204,94,15" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Round of 16">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnDraw16" Content="Draw Teams" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="110" Click="btnDraw16_Click"/>
+                    <Label Content="Match #: 1" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch1A" HorizontalAlignment="Left" Margin="159,42,0,0" TextWrapping="Wrap" Text="1st in Group A" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult1A" HorizontalAlignment="Left" Height="26" Margin="342,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult1B" HorizontalAlignment="Left" Height="26" Margin="406,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch1B" HorizontalAlignment="Left" Margin="485,42,0,0" TextWrapping="Wrap" Text="2nd in Group B" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 2" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch2C" HorizontalAlignment="Left" Margin="159,76,0,0" TextWrapping="Wrap" Text="1st in Group C" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult2C" HorizontalAlignment="Left" Height="26" Margin="342,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult2D" HorizontalAlignment="Left" Height="26" Margin="406,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch2D" HorizontalAlignment="Left" Margin="485,76,0,0" TextWrapping="Wrap" Text="2nd in Group D" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 3" HorizontalAlignment="Left" Margin="75,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch3B" HorizontalAlignment="Left" Margin="159,107,0,0" TextWrapping="Wrap" Text="1st in Group B" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult3B" HorizontalAlignment="Left" Height="26" Margin="342,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult3A" HorizontalAlignment="Left" Height="26" Margin="406,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch3A" HorizontalAlignment="Left" Margin="485,107,0,0" TextWrapping="Wrap" Text="2nd in Group A" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 4" HorizontalAlignment="Left" Margin="75,137,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch4D" HorizontalAlignment="Left" Margin="159,138,0,0" TextWrapping="Wrap" Text="1st in Group D" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult4D" HorizontalAlignment="Left" Height="26" Margin="342,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult4C" HorizontalAlignment="Left" Height="26" Margin="406,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch4C" HorizontalAlignment="Left" Margin="485,138,0,0" TextWrapping="Wrap" Text="2nd in Group C" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 5" HorizontalAlignment="Left" Margin="75,168,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch5E" HorizontalAlignment="Left" Margin="159,169,0,0" TextWrapping="Wrap" Text="1st in Group E" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult5E" HorizontalAlignment="Left" Height="26" Margin="342,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult5F" HorizontalAlignment="Left" Height="26" Margin="406,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch5F" HorizontalAlignment="Left" Margin="485,169,0,0" TextWrapping="Wrap" Text="2nd in Group F" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 6" HorizontalAlignment="Left" Margin="75,199,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch6G" HorizontalAlignment="Left" Margin="159,200,0,0" TextWrapping="Wrap" Text="1st in Group G" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult6G" HorizontalAlignment="Left" Height="26" Margin="342,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult6H" HorizontalAlignment="Left" Height="26" Margin="406,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch6H" HorizontalAlignment="Left" Margin="485,200,0,0" TextWrapping="Wrap" Text="2nd in Group H" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 7" HorizontalAlignment="Left" Margin="75,230,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch7F" HorizontalAlignment="Left" Margin="159,231,0,0" TextWrapping="Wrap" Text="1st in Group F" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult7F" HorizontalAlignment="Left" Height="26" Margin="342,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult7E" HorizontalAlignment="Left" Height="26" Margin="406,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch7E" HorizontalAlignment="Left" Margin="485,231,0,0" TextWrapping="Wrap" Text="2nd in Group E" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 8" HorizontalAlignment="Left" Margin="75,261,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch8H" HorizontalAlignment="Left" Margin="159,262,0,0" TextWrapping="Wrap" Text="1st in Group H" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult8H" HorizontalAlignment="Left" Height="26" Margin="342,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult8G" HorizontalAlignment="Left" Height="26" Margin="406,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch8G" HorizontalAlignment="Left" Margin="485,262,0,0" TextWrapping="Wrap" Text="2nd in Group G" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Button x:Name="btnPlayRound16" Content="Play Round of 16" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="150" Height="33" IsEnabled="False" Click="btnPlayRound16_Click"/>
+                    <Button x:Name="btnCheat" Content="Cheat Code" HorizontalAlignment="Left" Margin="696,300,0,0" VerticalAlignment="Top" Click="btnCheat_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Quarter-Finals">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="81*"/>
+                        <ColumnDefinition Width="179*"/>
+                        <ColumnDefinition Width="534*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnDrawQF" Content="Draw Teams" HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="110" Click="btnDrawQF_Click" IsEnabled="False" Grid.Column="2"/>
+                    <Label Content="Match #: 9" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbMatch9A" HorizontalAlignment="Left" Margin="78,42,0,0" TextWrapping="Wrap" Text="Winner of Match 1" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult9A" HorizontalAlignment="Left" Height="26" Margin="82,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult9B" HorizontalAlignment="Left" Height="26" Margin="146,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch9B" HorizontalAlignment="Left" Margin="225,42,0,0" TextWrapping="Wrap" Text="Winner of Match 2" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.Column="2" IsReadOnly="True"/>
+                    <Label Content="Match #: 10" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbMatch10A" HorizontalAlignment="Left" Margin="78,76,0,0" TextWrapping="Wrap" Text="Winner of Match 3" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult10A" HorizontalAlignment="Left" Height="26" Margin="82,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult10B" HorizontalAlignment="Left" Height="26" Margin="146,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch10B" HorizontalAlignment="Left" Margin="225,76,0,0" TextWrapping="Wrap" Text="Winner of Match 4" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.Column="2" IsReadOnly="True"/>
+                    <Label Content="Match #: 11" HorizontalAlignment="Left" Margin="75,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbMatch11A" HorizontalAlignment="Left" Margin="78,107,0,0" TextWrapping="Wrap" Text="Winner of Match 5" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult11A" HorizontalAlignment="Left" Height="26" Margin="82,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult11B" HorizontalAlignment="Left" Height="26" Margin="146,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch11B" HorizontalAlignment="Left" Margin="225,107,0,0" TextWrapping="Wrap" Text="Winner of Match 6" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.Column="2" IsReadOnly="True"/>
+                    <Label Content="Match #: 12" HorizontalAlignment="Left" Margin="75,137,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbMatch12A" HorizontalAlignment="Left" Margin="78,138,0,0" TextWrapping="Wrap" Text="Winner of Match 7" VerticalAlignment="Top" Width="147" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult12A" HorizontalAlignment="Left" Height="26" Margin="82,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult12B" HorizontalAlignment="Left" Height="26" Margin="146,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" Grid.Column="2" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch12B" HorizontalAlignment="Left" Margin="225,138,0,0" TextWrapping="Wrap" Text="Winner of Match 8" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" Grid.Column="2" IsReadOnly="True"/>
+                    <Button x:Name="btnPlayQF" Content="Play Quarter-Finals" HorizontalAlignment="Left" Margin="62,293,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="150" Height="33" IsEnabled="False" Click="btnPlayQF_Click" Grid.Column="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Semi-Finals">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnDrawSF" Content="Draw Teams" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="110" Click="btnDrawSF_Click" IsEnabled="False"/>
+                    <Label Content="Match #: 13" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch13A" HorizontalAlignment="Left" Margin="159,42,0,0" TextWrapping="Wrap" Text="Winner of Match 9" VerticalAlignment="Top" Width="166" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult13A" HorizontalAlignment="Left" Height="26" Margin="342,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult13B" HorizontalAlignment="Left" Height="26" Margin="406,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch13B" HorizontalAlignment="Left" Margin="485,42,0,0" TextWrapping="Wrap" Text="Winner of Match 10" VerticalAlignment="Top" Width="158" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Label Content="Match #: 14" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch14A" HorizontalAlignment="Left" Margin="159,76,0,0" TextWrapping="Wrap" Text="Winner of Match 11" VerticalAlignment="Top" Width="166" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult14A" HorizontalAlignment="Left" Height="26" Margin="342,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult14B" HorizontalAlignment="Left" Height="26" Margin="406,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch14B" HorizontalAlignment="Left" Margin="485,76,0,0" TextWrapping="Wrap" Text="Winner of Match 14" VerticalAlignment="Top" Width="158" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Button x:Name="btnPlaySF" Content="Play Semi-Finals" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="150" Height="33" IsEnabled="False" Click="btnPlaySF_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Final">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnDrawF" Content="Draw Teams" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="110" Click="btnDrawF_Click" IsEnabled="False"/>
+                    <Label Content="Match #: 15" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                    <TextBox x:Name="tbMatch15A" HorizontalAlignment="Left" Margin="159,42,0,0" TextWrapping="Wrap" Text="Winner of Match 13" VerticalAlignment="Top" Width="166" TextAlignment="Right" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult15A" HorizontalAlignment="Left" Height="26" Margin="342,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbResult15B" HorizontalAlignment="Left" Height="26" Margin="406,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Background="#FFE5E5E5" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True"/>
+                    <TextBox x:Name="tbMatch15B" HorizontalAlignment="Left" Margin="485,42,0,0" TextWrapping="Wrap" Text="Winner of Match 14" VerticalAlignment="Top" Width="158" FontSize="16" FontWeight="Bold" Height="26" Background="#FFE5E5E5" IsReadOnly="True"/>
+                    <Button x:Name="btnPlayF" Content="Play Final" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="150" Height="33" IsEnabled="False" Click="btnPlayF_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
